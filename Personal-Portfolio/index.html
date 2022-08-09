@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>An Nguyen's Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1956869e1f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/cover.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Application Developer Apprentice</p>
+            <h1>Hi, I'm <span>An Nguyen</span><br>from Louisiana</h1>
+        </div>
+    </div>
+</div>
+<!-- ------------about------------ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/VideoCapture_20220803-113219.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>My name is An Nguyen. I was born and raised in Houma, Louisiana. I have always had an interest in tech
+                    for as long as I could remember. Right now I am just trying to build my coding knowledge to a point where
+                    I am satisfied. And let me just say, I won't be satisfied anytime soon.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>App Development</span><br>Full Stack</li>
+                        <li><span>Python</span><br>Specialized</li>
+                        <li><span>HTML / CSS</span><br>Website Design</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 - Current</span><br>Application Developer Apprentice at IBM</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022 - Current</span><br>Application Developer Course</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ------------services---------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>App Design</h2>
+                <p>jfkldjsa fdlj;fkjd;lf jda dalkjfd; jflkd;jafd  jfkdl;a fjkdl ajflkds al</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-mobile-screen"></i>
+                <h2>Mobile App Design</h2>
+                <p>jfkldjsa fdlj;fkjd;lf jda dalkjfd; jflkd;jafd  jfkdl;a fjkdl ajflkds al</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-arrow-pointer"></i>
+                <h2>Website Design</h2>
+                <p>jfkldjsa fdlj;fkjd;lf jda dalkjfd; jflkd;jafd  jfkdl;a fjkdl ajflkds al</p>
+                <a href="#">Learn more</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- -----------------------portfolio------------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work1.jpg">
+                <div class="layer">
+                    <h3>Blog Website</h3>
+                    <p>The website allows you to store your thoughts in 
+                        a database and share with others</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work2.jfif">
+                <div class="layer">
+                    <h3>Mobile App</h3>
+                    <p>Blog Website Mobile Version</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work3.jpg">
+                <div class="layer">
+                    <h3>Bench Report Project for IBM</h3>
+                    <p>Python project for IBM's bench report</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-- -------------------contact---------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>an-nguyen@ibm.com</p>
+                <p>(225) 747-0774</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/an-nguyen-616166195/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right"></div>
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</body>
+</html>
